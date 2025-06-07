@@ -1,0 +1,119 @@
+/* Page background */
+.login-bg , .signup-bg {
+  min-height: 550px;
+  background: linear-gradient(135deg, #c9d6ff, #e2e2e2);
+  background-size: 200% 200%;
+  animation: bgMotion 10s ease infinite;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background motion animation */
+@keyframes bgMotion {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Card Styling */
+.login-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(200, 200, 200, 0.2);
+  width: 100%;
+  max-width: 420px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Input field style */
+.input-animated {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.input-animated:focus {
+  border-color: #4dabf7;
+  box-shadow: 0 0 6px #4dabf7;
+  outline: none;
+}
+
+/* Floating Label Effect */
+.form-group {
+  position: relative;
+  margin-bottom: 1.8rem;
+}
+
+.form-label {
+  position: absolute;
+  left: 16px;
+  top: 12px;
+  color: #666;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  background: white;
+  padding: 0 6px;
+  z-index: 1;
+}
+
+.input-animated:focus + .form-label,
+.input-animated:not(:placeholder-shown) + .form-label {
+  top: -10px;
+  left: 12px;
+  font-size: 0.8rem;
+  color: #4dabf7;
+}
+
+/* Gradient button */
+.btn-gradient {
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 8px;
+  width: 100%;
+  font-weight: bold;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(to right, #5a67d8, #6b46c1);
+  transform: scale(1.03);
+}
+
+/* Link */
+a {
+  text-decoration: none;
+  color: #5c6bc0;
+}
+
+a:hover {
+  text-decoration: underline;
+}
