@@ -15,7 +15,7 @@ It allows users to register, log in, manage notes, and reset passwords.
 ### Prerequisites
 
 - Node.js (v14+ recommended)
-- Backend API running (see [iNoteBook-app-Backend](../iNoteBook-app-Backend))
+- Backend API running (see [iNoteBook-app-Backend](https://github.com/ankitrokde1/iNoteBook-app-Backend))
 
 ### Installation
 
