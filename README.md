@@ -40,7 +40,7 @@ It allows users to register, log in, manage notes, and reset passwords.
    ```sh
    npm start
    ```
-   The app will run on `http://localhost:3000` by default.
+   The app will run on `http://localhost:5173` by default.
 
 ## Folder Structure
 
