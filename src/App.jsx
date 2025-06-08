@@ -80,6 +80,19 @@ function App() {
                     path="/reset-password/:token"
                     element={<ResetPassword showAlert={showAlert} />}
                   />
+
+                  <Route
+                    path="*"
+                    element={
+                      <div className="container mt-5 text-center">
+                        <h2>Oops! Page not found.</h2>
+                        <p>
+                          The page you’re looking for doesn’t exist or has been
+                          moved.
+                        </p>
+                      </div>
+                    }
+                  />
                 </Routes>
                 <Footer />
               </div>
