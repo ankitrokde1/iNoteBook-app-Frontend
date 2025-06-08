@@ -153,6 +153,9 @@ const SignUp = (props) => {
             )}
           </button>
         </form>
+        <p className="mt-3 text-center text-muted">
+          Already have an account? <a href="/login">Login</a>
+        </p>
       </div>
     </div>
   );
