@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import axios from "../api/axiosInstance.jsx";
 import { useAuth } from "../context/notes/AuthContext.jsx";
@@ -8,6 +8,7 @@ const Navbar = (props) => {
   const location = useLocation();
   const navigate = useNavigate();
   const { isAuthenticated, setIsAuthenticated } = useAuth();
+  const navbarCollapseRef = useRef(null);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -26,6 +27,26 @@ const Navbar = (props) => {
       setUserName("");
     }
   }, [location.pathname, isAuthenticated]);
+
+  // Collapse navbar when clicking outside on small screens
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      const navbarCollapse = navbarCollapseRef.current;
+      if (
+        navbarCollapse &&
+        navbarCollapse.classList.contains("show") &&
+        !navbarCollapse.contains(event.target) &&
+        !event.target.classList.contains("navbar-toggler")
+      ) {
+        navbarCollapse.classList.remove("show");
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const handleLogout = async () => {
     try {
@@ -55,7 +76,11 @@ const Navbar = (props) => {
         <span className="navbar-toggler-icon"></span>
       </button>
 
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <div
+        className="collapse navbar-collapse"
+        id="navbarSupportedContent"
+        ref={navbarCollapseRef}
+      >
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
             <Link
