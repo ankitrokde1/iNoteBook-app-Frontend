@@ -3,7 +3,7 @@
 This is the frontend for the iNoteBook application, built with React.  
 It allows users to register, log in, manage notes, and reset passwords.
 
-🚀 **Live Demo**: [iNotebook App](https://inotebook-app-plum.vercel.app/)
+🚀 **Live Demo**: <a href="https://inotebook-app-plum.vercel.app/" target="_blank" rel="noopener noreferrer">iNotebook App</a>
 
 ![Preview](./src/assests/images/screenshot.png)
 
