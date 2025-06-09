@@ -57,7 +57,3 @@ src/
   index.js       # Entry point
 .env.example     # Example environment variables
 ```
-
-## License
-
-This project is licensed under the MIT License.
