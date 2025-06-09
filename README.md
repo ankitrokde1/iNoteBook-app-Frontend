@@ -5,7 +5,7 @@ It allows users to register, log in, manage notes, and reset passwords.
 
 🚀 **Live Demo**: [iNotebook App](https://inotebook-app-plum.vercel.app/)
 
-![Preview](./assests/images/screenshot.png)
+![Preview](./src/sassests/images/screenshot.png)
 
 ## Features
 
