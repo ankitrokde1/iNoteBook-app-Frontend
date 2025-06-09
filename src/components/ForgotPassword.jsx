@@ -76,12 +76,11 @@ const ForgotPassword = ({ showAlert }) => {
               </span>
             </div>
             <div className="fw-semibold mb-1">{successMessage}</div>
-            <div className="small text-muted">
-              Please check your email for the reset link.
-              <br />
-              <span className="text-primary">
-                Didn’t get it? Check your spam folder.
-              </span>
+            <div className="small text-muted mt-2">
+              Didn’t get the email? <br />• Check your <strong>Spam</strong> or{" "}
+              <strong>Promotions</strong> folder.
+              <br />• Mark the email as "Not Spam" to get future updates in your
+              inbox.
             </div>
           </div>
         ) : (
@@ -116,7 +115,6 @@ const ForgotPassword = ({ showAlert }) => {
               >
                 <i className="fas fa-envelope"></i>
               </span>
-              
             </div>
             <button
               type="submit"
