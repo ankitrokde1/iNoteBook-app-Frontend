@@ -1,6 +1,53 @@
+import { useState, useEffect } from "react";
 import Notes from "./Notes.jsx";
 
 const Home = (props) => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading (e.g., fetching notes)
+    const timer = setTimeout(() => setLoading(false), 1200);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
+        <div className="text-center">
+          <div
+            className="spinner-border text-primary"
+            style={{
+              width: "3.5rem",
+              height: "3.5rem",
+              borderWidth: "0.5em",
+              marginBottom: "1.5rem",
+            }}
+            role="status"
+          >
+            <span className="sr-only">Loading...</span>
+          </div>
+          <h4 className="fw-bold text-primary mb-2 animate__animated animate__pulse animate__infinite">
+            iNoteBook
+          </h4>
+          <div className="text-muted mb-2">
+            <span
+              style={{
+                background:
+                  "linear-gradient(90deg,#2563eb,#1e40af,#22c55e,#16a34a)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                fontWeight: 600,
+                fontSize: "1.1rem",
+              }}
+            >
+              Loading your notes...
+            </span>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="container my-5">
       <div
